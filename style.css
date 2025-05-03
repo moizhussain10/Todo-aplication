@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffe0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.app-glass {
+  background: rgba(20, 20, 40, 0.6);
+  border: 2px solid #00ffe0;
+  box-shadow: 0 0 30px #00ffe088;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 420px;
+  transition: all 0.3s;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffe0;
+}
+
+.input-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00ffe0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 12px 15px;
+  background: transparent;
+  border: none;
+  color: #00ffe0;
+  font-size: 15px;
+  outline: none;
+}
+
+.input-box button {
+  background: #00ffe0;
+  color: #111;
+  border: none;
+  padding: 0 18px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  background: #00bfa6;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffe0;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s ease-in-out;
+  color: #00ffe0;
+  box-shadow: 0 0 10px #00ffe055;
+}
+
+.task-text {
+  flex: 1;
+  margin-left: 10px;
+  word-break: break-word;
+}
+
+li.completed .task-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li i {
+  cursor: pointer;
+  color: #ff3860;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+li i:hover {
+  color: #ff0000;
+}
+
+input[type="checkbox"] {
+  accent-color: #00ffe0;
+  transform: scale(1.3);
+}
+i.fa-trash {
+  color: #ff4d4d;
+  transition: 0.3s;
+}
+i.fa-trash:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}
