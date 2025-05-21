@@ -27,7 +27,7 @@ function addTask() {
     }
 }
 
-function del(buttonElement  ) {
+function del(buttonElement) {
     var li = buttonElement.parentElement
     var checkbox = li.querySelector('input[type="checkbox"]')
     
