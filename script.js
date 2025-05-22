@@ -2,7 +2,7 @@ var input = document.getElementById('task-input')
 var input_list = document.getElementById('tasklist')
 
 function addTask() {
-    var taskText = input.value
+    var taskText = input.value.trim()
     var lasttask = input_list.lastElementChild?.querySelector('span')?.textContent
 
     if (taskText === '') {
