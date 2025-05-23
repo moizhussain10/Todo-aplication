@@ -33,7 +33,15 @@ function del(buttonElement) {
     
     if(checkbox.checked){
         li.remove()
-    }else{
+    }
+    else if(input_list.value === ""){
+        input_list.innerHTML = ""
+    }
+    else{
         alert("The task is not complete")
     }
+}
+
+function delall(){
+    input_list.innerHTML = ""
 }
