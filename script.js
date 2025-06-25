@@ -1,7 +1,6 @@
 var input = document.getElementById('task-input');
 var input_list = document.getElementById('tasklist');
 
-// ✅ Load saved tasks when page loads
 window.onload = function () {
     loadTasksFromStorage();
 };
@@ -26,7 +25,7 @@ function addTask() {
         `;
         input_list.innerHTML += newitem;
         input.value = '';
-        saveTasksToStorage(); // ✅ Save after adding
+        saveTasksToStorage(); 
     }
 }
 
@@ -35,7 +34,7 @@ function edit(e) {
     var updatedText = prompt("Enter updated task", span.textContent);
     if (updatedText !== null && updatedText.trim() !== "") {
         span.textContent = updatedText.trim();
-        saveTasksToStorage(); // ✅ Save after editing
+        saveTasksToStorage(); 
     }
 }
 
@@ -45,7 +44,7 @@ function del(buttonElement) {
 
     if (checkbox.checked) {
         li.remove();
-        saveTasksToStorage(); // ✅ Save after deleting
+        saveTasksToStorage(); 
     } else {
         alert("The task is not complete");
     }
@@ -53,10 +52,9 @@ function del(buttonElement) {
 
 function delall() {
     input_list.innerHTML = "";
-    localStorage.removeItem('tasks'); // ✅ Clear storage
+    localStorage.removeItem('tasks'); 
 }
 
-// ✅ Save current tasks to localStorage
 function saveTasksToStorage() {
     var tasks = [];
     var allTasks = document.querySelectorAll('#tasklist li');
@@ -70,7 +68,6 @@ function saveTasksToStorage() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// ✅ Load tasks from localStorage
 function loadTasksFromStorage() {
     var storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
