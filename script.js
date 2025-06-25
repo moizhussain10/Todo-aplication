@@ -10,6 +10,7 @@ function addTask() {
     var lasttask = input_list.lastElementChild?.querySelector('span')?.textContent;
 
     if (taskText === '') {
+        alert("Please add task")
         return;
     } else if (lasttask === taskText) {
         alert("The task has already been written");
